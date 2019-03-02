@@ -3,5 +3,5 @@ node_modules/
 \.idea/
 coverage/
 .nyc_output/
-.build
-.built
+build/
+built/
