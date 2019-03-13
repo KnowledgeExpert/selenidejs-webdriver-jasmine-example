@@ -8,7 +8,7 @@ describe('Google', () => {
 
         await browser.element(by.name('q')).setValue('selenium').then(perform.pressEnter);
 
-        await browser.all('#ires .g').should(have.size(14))
+        await browser.all('#ires .g').should(have.size(12))
             .then(find.first)
             .then(should.match(have.text('Selenium automates browsers')))
             .then(find.element('.r>a'))

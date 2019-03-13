@@ -1,7 +1,6 @@
 import { Browser } from 'selenidejs';
 import { Builder, Capabilities } from 'selenium-webdriver';
 
-
 export let browser: Browser;
 
 beforeAll(async () => {

@@ -1,20 +1,17 @@
-import { be, Browser, have, perform, by } from 'selenidejs';
+import { be, have, perform, by } from 'selenidejs';
+import { browser } from '../../base';
 
 export class TodoMvc {
-
-    constructor(private readonly browser: Browser) {
-        this.browser = browser;
-    }
     
-    tasks = this.browser.all('#todo-list>li');
+    tasks = browser.all('#todo-list>li');
 
     async open() {
-        await this.browser.open('/');
+        await browser.open('http://todomvc.com/examples/emberjs/');
     }
 
     async add(...taskTexts: string[]) {
         for (const text of taskTexts) {
-            await this.browser.element('#new-todo')
+            await browser.element('#new-todo')
                 .type(text)
                 .then(perform.pressEnter);
         }
@@ -25,15 +22,15 @@ export class TodoMvc {
     }
 
     async filterActive() {
-        await this.browser.element(by.linkText('Active')).click();
+        await browser.element(by.linkText('Active')).click();
     }
 
     async filterCompleted() {
-        await this.browser.element(by.linkText('Completed')).click();
+        await browser.element(by.linkText('Completed')).click();
     }
 
     async filterAll() {
-        await this.browser.element(by.linkText('All')).click();
+        await browser.element(by.linkText('All')).click();
     }
 
     async toggle(taskText: string) {

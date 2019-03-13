@@ -1,10 +1,9 @@
 import { TodoMvc } from './pages/todomvc';
-import { browser } from '../base';
 
 describe('TodoMvc', () => {
 
     it('filters tasks', async () => {
-        const todos = new TodoMvc(browser.with({baseUrl: 'http://todomvc.com/examples/emberjs'}));
+        const todos = new TodoMvc();
 
         await todos.open();
 
