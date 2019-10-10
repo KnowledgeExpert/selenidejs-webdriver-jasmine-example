@@ -4,7 +4,6 @@ Web UI tests example using [SelenideJS](selenidejs.org) on top of Selenium WebDr
 Installed:
 * [NodeJs](https://nodejs.org/en/download/current/)
 * [Chrome Browser](https://www.google.com/chrome/)
-* [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/getting-started)
 
 # To run tests
 ```
